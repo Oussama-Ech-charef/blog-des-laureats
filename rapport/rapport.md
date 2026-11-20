@@ -140,49 +140,7 @@ Le diagramme de cas d’utilisation présente les acteurs du Blog des Lauréats 
 
 ## Diagramme
 
-```mermaid
-flowchart LR
-    Apprenant["👤<br/><b>Apprenant</b>"]
-    Laureat["👤<br/><b>Lauréat</b>"]
-    Admin["👤<br/><b>Administrateur</b>"]
 
-    subgraph System ["Blog des Lauréats"]
-        direction TB
-
-        subgraph Consultation ["Consultation des articles"]
-            UC_Liste(["Consulter la liste des articles"])
-            UC_Detail(["Lire le détail d'un article"])
-        end
-
-        subgraph Redaction ["Rédaction des articles"]
-            UC_Rediger(["Rédiger un article"])
-            UC_Publier(["Publier ou dépublier un article"])
-            UC_Modifier(["Modifier un article"])
-            UC_Supprimer(["Supprimer un article"])
-        end
-
-        subgraph Administration ["Administration"]
-            UC_Categories(["Gérer les catégories"])
-            UC_Moderer(["Modérer les articles"])
-        end
-    end
-
-    Apprenant --- UC_Liste
-    Apprenant --- UC_Detail
-
-    Laureat --- UC_Liste
-    Laureat --- UC_Detail
-    Laureat --- UC_Rediger
-    Laureat --- UC_Publier
-    Laureat --- UC_Modifier
-    Laureat --- UC_Supprimer
-
-    Admin --- UC_Categories
-    Admin --- UC_Moderer
-
-    UC_Detail -.->|«include»| UC_Liste
-    UC_Publier -.->|«include»| UC_Rediger
-```
 
 _Figure : Cas d’utilisation du Blog des Lauréats._
 
@@ -204,47 +162,7 @@ Le premier sprint couvre la consultation du détail d’un article tel que décr
 
 Le diagramme de classes décrit les entités principales du Blog des Lauréats : le lauréat qui rédige les articles, l’article publié et la catégorie qui le classe.
 
-```mermaid
-classDiagram
-    direction TB
 
-    class Laureat {
-        -int id
-        -string nom
-        -string email
-        -string motDePasse
-        -string role
-        -string bio
-        -datetime createdAt
-        +getNomComplet() string
-        +getArticles() List~Article~
-    }
-
-    class Article {
-        -int id
-        -string titre
-        -string slug
-        -text contenu
-        -string statut
-        -int auteurId
-        -int categorieId
-        -datetime publieLe
-        +getAuteur() Laureat
-        +getCategorie() Categorie
-        +publier() void
-        +depublier() void
-    }
-
-    class Categorie {
-        -int id
-        -string nom
-        -string slug
-        +getArticles() List~Article~
-    }
-
-    Laureat "1" --> "0..*" Article : rédige
-    Categorie "1" --> "0..*" Article : classe
-```
 
 ## Description des classes
 
@@ -304,17 +222,7 @@ Le modèle MVC répartit l'application en trois rôles :
 - **Vue** : affiche les informations et reçoit les actions de l'utilisateur, au moyen des gabarits Blade.
 - **Contrôleur** : reçoit une action, sollicite la logique métier et transmet le résultat à la vue.
 
-```mermaid
-flowchart LR
-    U[Utilisateur] -->|action| V[Vue Blade]
-    V -->|requête HTTP| C[Contrôleur]
-    C -->|appel| S[Classe Service]
-    S -->|lecture ou modification| M[Modèle Eloquent]
-    M -->|données| S
-    S -->|résultat| C
-    C -->|données à afficher| V
-    V -->|affichage HTML| U
-```
+
 
 _Figure 1 — Échange MVC : le contrôleur coordonne la vue, le service et le modèle lors d’une requête._
 
@@ -328,18 +236,7 @@ Cette architecture sépare l’application en couches qui communiquent de proche
 - **Logique métier** : contrôleurs minces et classes Service qui appliquent les règles du projet.
 - **Accès aux données** : modèles Eloquent qui lisent et écrivent dans la base MySQL.
 
-```mermaid
-flowchart TB
-    U[Utilisateur] --> P[Présentation<br/>Blade, HTML5, CSS3/Tailwind, JavaScript]
-    P -->|requête HTTP| C[Contrôleur mince]
-    C --> S[Logique métier<br/>Classe Service]
-    S --> M[Accès aux données<br/>Modèles Eloquent]
-    M <--> D[(Base MySQL)]
-    M -->|résultat| S
-    S -->|résultat| C
-    C -->|vue Blade| P
-    P -->|affichage| U
-```
+
 
 _Figure 2 — Les trois tiers séparent l’interface, le traitement des opérations et le stockage._
 
@@ -347,17 +244,7 @@ _Figure 2 — Les trois tiers séparent l’interface, le traitement des opérat
 
 Le Blog des Lauréats permet à un lauréat de Solicode Tanger de rédiger, publier et administrer ses articles, et aux apprenants de consulter ces retours d’expérience. L’application est déployée en ligne et repose sur Laravel, Blade et MySQL.
 
-```mermaid
-flowchart LR
-    U[Utilisateur<br/>lauréat ou apprenant] <-->|interface| UI[Navigateur<br/>gabarits Blade]
-    UI -->|requête HTTP| R[Routes Laravel<br/>routes/web.php]
-    R --> C[Contrôleur mince<br/>ArticleController]
-    C --> S[Classe Service<br/>ArticleService]
-    S --> M[Modèle Eloquent<br/>Article, Catégorie, Lauréat]
-    M <--> D[(Base MySQL)]
-    S -->|résultat ou erreur 404| C
-    C -->|vue Blade| UI
-```
+
 
 _Figure 3 — Architecture globale du Blog des Lauréats._
 

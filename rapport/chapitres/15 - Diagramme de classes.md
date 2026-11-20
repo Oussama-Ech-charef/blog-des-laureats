@@ -2,47 +2,7 @@
 
 Le diagramme de classes décrit les entités principales du Blog des Lauréats : le lauréat qui rédige les articles, l’article publié et la catégorie qui le classe.
 
-```mermaid
-classDiagram
-    direction TB
 
-    class Laureat {
-        -int id
-        -string nom
-        -string email
-        -string motDePasse
-        -string role
-        -string bio
-        -datetime createdAt
-        +getNomComplet() string
-        +getArticles() List~Article~
-    }
-
-    class Article {
-        -int id
-        -string titre
-        -string slug
-        -text contenu
-        -string statut
-        -int auteurId
-        -int categorieId
-        -datetime publieLe
-        +getAuteur() Laureat
-        +getCategorie() Categorie
-        +publier() void
-        +depublier() void
-    }
-
-    class Categorie {
-        -int id
-        -string nom
-        -string slug
-        +getArticles() List~Article~
-    }
-
-    Laureat "1" --> "0..*" Article : rédige
-    Categorie "1" --> "0..*" Article : classe
-```
 
 ## Description des classes
 
