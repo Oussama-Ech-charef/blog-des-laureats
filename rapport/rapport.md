@@ -2,7 +2,7 @@
 
 > Document consolidé généré automatiquement.
 
-> Date de génération : 2026-11-19
+> Date de génération : 2026-11-20
 
 ---
 
@@ -20,7 +20,7 @@ Table des matières
 - Méthode SCRUM
 - Design thinking
 - Planification
-- Persona
+- Empathie
 - Définition du problème
 - Idéation
 - Diagramme de cas d’utilisation
@@ -55,7 +55,7 @@ Table des matières
 
 La méthodologie Scrum est une méthodologie agile qui permet de gérer un projet de manière flexible et collaborative, en favorisant la livraison progressive de fonctionnalités. Elle repose sur l’itération, la priorisation des tâches et la communication régulière entre les membres de l’équipe. Dans le cadre du projet Blog des Lauréats, nous avons organisé le travail selon les principes de Scrum, ce qui nous a permis de mieux planifier, suivre et livrer les différentes fonctionnalités de manière efficace.
 
-![Méthodologie Scrum](assets/scrum.png)
+![Méthodologie Scrum](../assets/scrum.png)
 
 *Figure : La méthode SCRUM*
 
@@ -85,7 +85,7 @@ L’adoption de la méthode Scrum a permis d’assurer une organisation efficace
 
 Le Design Thinking est une approche de résolution de problèmes centrée sur l’humain. Elle vise à comprendre en profondeur les besoins réels des utilisateurs afin de concevoir des solutions innovantes, utiles et adaptées. Cette méthode est largement utilisée dans les domaines du design, de la technologie, de l’éducation et de l’innovation pour répondre à des problématiques complexes.
 
-![Design Thinking](assets/design_thinking.jpg)
+![Design Thinking](../assets/design_thinking.jpg)
 
 *Figure : Méthodologie Design Thinking*
 
@@ -114,7 +114,9 @@ Le Design Thinking est donc une méthode structurée et flexible qui permet de t
 
 ---
 
-9 : Persona
+9 : Empathie
+
+## Persona
 
 ---
 
