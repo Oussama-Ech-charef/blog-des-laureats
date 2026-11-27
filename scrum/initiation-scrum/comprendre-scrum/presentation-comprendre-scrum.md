@@ -3,8 +3,8 @@ marp: true
 theme: default
 size: 16:9
 paginate: true
-header: "Solicode N3 - Projet Imitation : Blog des lauréats"
-footer: "Encadrant : ESSARRAJ Fouad | Solicode Tanger"
+header: "Solicode N3 - Projet : Billetterie d'événements"
+footer: "Encadrant : ES-SARRAJ Fouad | Solicode Tanger"
 ---
 
 <style>
@@ -18,118 +18,93 @@ footer: "Encadrant : ESSARRAJ Fouad | Solicode Tanger"
   <img class="logo solicode" src="./images/solicode.png" alt="Solicode logo" style="object-fit: contain;">
 </div>
 
-
 # Comprendre Agile et Scrum
 
 ### Projet : Billetterie d'événements
+
 - **Apprenant** : Oussama Ech-charef
 - **Encadrant** : ES-SARRAJ Fouad
----
-
-# 1. Agile vs Cycle en V
-
-
-**Cycle en V**
-- Plan fixe.
-- Étapes successives.
-- Livraison à la fin.
-  
----
-
-**Agile**
-- Travail en Sprints.
-- Livraison progressive.
-- Adaptation aux changements.
 
 ---
 
-# 2. Les 4 valeurs Agile
+# Pourquoi abandonner le Cycle en V ?
 
-1. Personnes et échanges.
-2. Logiciel fonctionnel.
-3. Collaboration client.
-4. Adaptation au changement.
+- Étapes fixes et successives.
+- Le client voit le résultat à la fin.
+- Les changements sont difficiles et coûteux.
+- Risque de **l'effet tunnel**.
 
-**Objectif : travailler ensemble et satisfaire le client.**
-
----
-
-# 3. Les 3 piliers Scrum
-
-- **Transparence :** travail clair.
-- **Inspection :** vérifier le travail.
-- **Adaptation :** améliorer le travail.
+**Agile :** travailler par petits cycles et recevoir du feedback.
 
 ---
 
-# 4. Les 3 rôles Scrum
+# Les 4 Valeurs du Manifeste Agile
 
-**Product Owner**
-- Définit les besoins et les priorités.
-
-**Scrum Master**
-- Aide l'équipe et supprime les obstacles.
-
-**Developers**
-- Développent et testent le produit.
+1. **Individus et interactions** : communiquer en équipe.
+2. **Logiciel fonctionnel** : montrer un produit qui marche.
+3. **Collaboration client** : travailler avec le client.
+4. **Adaptation au changement** : accepter les changements.
 
 ---
 
-# 5. Les 5 événements Scrum
+# Les 3 Rôles Scrum
 
-1. Sprint : période de travail.
-2. Sprint Planning : préparer le Sprint.
-3. Daily Scrum : réunion quotidienne.
-4. Sprint Review : présenter le résultat.
-5. Sprint Retrospective : améliorer le travail.
+### Product Owner (PO)
+Définit les besoins et les priorités de la Billetterie.
+
+### Scrum Master (SM)
+Facilite le travail et aide l'équipe.
+
+### Developers
+Développent et testent les fonctionnalités de la plateforme.
 
 ---
 
-# 6. Projet Billetterie
+# Les 5 Événements Fondamentaux
 
-**Product Goal :**
+1. **Sprint** : période de travail.
+2. **Sprint Planning** : planifier le Sprint.
+3. **Daily Scrum** : réunion quotidienne de 15 minutes.
+4. **Sprint Review** : présenter le résultat.
+5. **Sprint Retrospective** : améliorer le travail.
 
-Créer une application Web pour gérer les événements.
+---
 
-**Product Backlog :**
+# Cadrage du Sprint 1 (MVP)
+
+### Objectif
+Créer une première version de la Billetterie.
+
+### Fonctionnalités
 - Ajouter un événement.
-- Afficher les événements.
-- Modifier un événement.
-- Gérer les catégories.
+- Afficher la liste des événements.
+- Voir les informations d'un événement.
+
+### Résultat attendu
+Une première version fonctionnelle de la plateforme.
 
 ---
 
-# 7. Notre Sprint 1
+# Definition of Done (DoD)
 
-**Durée :** une semaine.
+Une fonctionnalité est terminée lorsque :
 
-**Sprint Goal :** ajouter et afficher les événements.
-
-**Tâches :**
-- Créer la base MySQL.
-- Développer le formulaire.
-- Afficher les événements.
-- Tester le travail.
-
-**Increment :** première version fonctionnelle.
+- Le formulaire est validé.
+- L'événement est enregistré dans MySQL.
+- Les événements sont affichés correctement.
+- L'interface est responsive.
+- Les tests manuels sont validés.
+- Le code fonctionne sans erreur.
 
 ---
 
-# 8. DoD 
+# Conclusion
 
-**Definition of Done :**
-- Code terminé.
-- Fonctionnalité testée.
-- Tests réussis.
+- Cycle en V : étapes fixes.
+- Agile : développement progressif.
+- Scrum : organisation du travail.
+- Sprint : livrer une partie fonctionnelle.
 
---- 
-
-# 9. Conclusion
-
-**Conclusion :**
-
-Agile apporte la flexibilité.
-
-Scrum organise le travail en Sprints.
+**Objectif :** créer une Billetterie d'événements utile et évolutive.
 
 ### Merci pour votre attention !
